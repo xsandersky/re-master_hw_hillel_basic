@@ -1,5 +1,6 @@
 num = int(input('Input random numeric: '))
 final = ''
+
 b,c  = divmod(num, 2)
 final += str(c)
 b,c  = divmod(b, 2)
