@@ -10,3 +10,9 @@ final_str = ''.join(lst)
 
 print(final_str)
 
+#_____________________________________________
+txt = input('Input some text: ').title()
+txt = txt.replace('_', '')
+
+print(txt)
+
