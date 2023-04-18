@@ -1,0 +1,11 @@
+get_input = input('Input smth info: ')
+
+print(f'Third character is = {get_input[2]}')
+print(f'Penultimate character is {get_input[-2]}')
+print(f'First five character is {get_input[:5]}')
+print(f'All string without last two character is {get_input[:-2]}')
+print(f'All characters with paired indices is {get_input[::2]}')
+print(f'All characters with unpaired indeces is {get_input[1::2]}')
+print(f'All characters in reverse is {get_input[::-1]}')
+print(f'All characters in reverse with paired inveces is {get_input[-1::-2]}')
+print(f'Lenght string is {len(get_input)}')
