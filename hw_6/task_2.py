@@ -17,9 +17,9 @@ def main():
         print('There are no roots.')
     elif x1 is None or x2 is None:
         if x1 is None:
-            print(f'Quadratic equation has 1 root x2 = {x2}')
+            print(f'Quadratic equation has 1 root x = {x2}')
         else:
-            print(f'Quadratic equation has 1 root x1 = {x1}')
+            print(f'Quadratic equation has 1 root x = {x1}')
     else:
         print(f'Quadratic equation has 2 roots:\nx1 = {x1},\nx2 = {x2}')
 
