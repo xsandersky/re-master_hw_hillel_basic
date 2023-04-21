@@ -15,8 +15,8 @@ def my_func(start, end):
 
 
 def main():
-    start = 1
-    end = 100
+    start = int(input('INput start value: '))
+    end = int(input('INput end value: '))
 
     print(my_func(start, end))
 
