@@ -6,7 +6,7 @@ def copydeep(object):
         if isinstance(elem, (list, tuple)):
             elem_type = type(elem)
             new_elem = elem_type(elem[:])
-            new_obj.append(new_elem)
+            new_obj.append(copydeep(new_elem))
         else:
             new_obj.append(elem)
 
