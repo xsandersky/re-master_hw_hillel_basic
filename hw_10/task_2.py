@@ -11,28 +11,40 @@ import secrets
 import string
 
 
+def get_input(promt):
+    while True:
+        try:
+            user_input = int(input(promt))
+        except:
+            print('The program only accepts numbers as input: ')
+            continue
+        else:
+            if user_input > 7:
+                break
+            print('Input number more than 7: ')
+
+    return user_input
+
+
 def gen_pass(n):
     data_for_pass = string.ascii_letters + string.digits + '_'
-    while n < 8:
-        n = int(input('Input digit > 7: '))
-
     new_pas = {}
 
     while True:
         while len(new_pas)!= n:
             random_char = secrets.choice(data_for_pass)
-            new_pas[random_char] = id(random_char)
+            new_pas[random_char] = random_char
 
         if any(c.islower() for c in new_pas) and\
                 any(c.isupper() for c in new_pas) and\
                 any(c.isdigit() for c in new_pas):
             break
 
-    return ''.join(list(new_pas))
+    return ''.join(new_pas.keys())
 
 
 def main():
-    count_of_char = int(input('Input from amount characters would create password: '))
+    count_of_char = get_input('Input from amount characters would create password: ')
     print(gen_pass(count_of_char))
 
 
